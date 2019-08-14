@@ -7,3 +7,6 @@
 支持根据文件大小来rotate。目前依赖了logrus和lumberjack。
 
 ### v2
+封装了log标准库,提供了文件log和控制台log。目前不支持rotate，rotate可以利用linux的logrotate。
+
+### v3

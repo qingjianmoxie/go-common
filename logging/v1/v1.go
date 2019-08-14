@@ -5,12 +5,12 @@ import (
 	"github.com/sirupsen/logrus"
 )
 
-var logging *JLogger
+var logger *JLogger
 
 type KV = logrus.Fields
 
 func init() {
-	logging = NewJLogger()
+	logger = NewJLogger()
 }
 
 type JLogger struct {
@@ -150,65 +150,65 @@ func (l *JLogger) FatalKV(kv KV, msg string) {
 }
 
 func Printf(format string, v ...interface{}) {
-	logging.Printf(format, v...)
+	logger.Printf(format, v...)
 }
 
 func Debugf(format string, v ...interface{}) {
-	logging.Debugf(format, v...)
+	logger.Debugf(format, v...)
 }
 
 func Infof(format string, v ...interface{}) {
-	logging.Infof(format, v...)
+	logger.Infof(format, v...)
 }
 
 func Warnf(format string, v ...interface{}) {
-	logging.Warnf(format, v...)
+	logger.Warnf(format, v...)
 }
 
 func Errorf(format string, v ...interface{}) {
-	logging.Errorf(format, v...)
+	logger.Errorf(format, v...)
 }
 
 func Panicf(format string, v ...interface{}) {
-	logging.Panicf(format, v...)
+	logger.Panicf(format, v...)
 }
 
 func Fatalf(format string, v ...interface{}) {
-	logging.Fatalf(format, v...)
+	logger.Fatalf(format, v...)
 }
 
 func PrintKV(kv KV, msg string) {
-	logging.PrintKV(kv, msg)
+	logger.PrintKV(kv, msg)
 }
 
 func DebugKV(kv KV, msg string) {
-	logging.DebugKV(kv, msg)
+	logger.DebugKV(kv, msg)
 }
 
 func InfoKV(kv KV, msg string) {
-	logging.InfoKV(kv, msg)
+	logger.InfoKV(kv, msg)
 }
 
 func WarnKV(kv KV, msg string) {
-	logging.WarnKV(kv, msg)
+	logger.WarnKV(kv, msg)
 }
 
 func ErrorKV(kv KV, msg string) {
-	logging.ErrorKV(kv, msg)
+	logger.ErrorKV(kv, msg)
 }
 
 func PanicKV(kv KV, msg string) {
-	logging.PanicKV(kv, msg)
+	logger.PanicKV(kv, msg)
 }
 
 func FatalKV(kv KV, msg string) {
-	logging.FatalKV(kv, msg)
+	logger.FatalKV(kv, msg)
 }
 
 func EnableLogFile(enabled bool) {
-	logging.EnableFileLog(enabled)
+	logger.EnableFileLog(enabled)
 }
 
 func SetLogfile(filename string) {
-	logging.SetLogfile(filename)
+	logger.SetLogfile(filename)
 }
